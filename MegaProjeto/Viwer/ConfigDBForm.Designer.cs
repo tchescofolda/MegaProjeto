@@ -40,7 +40,6 @@
             this.txSenha = new System.Windows.Forms.TextBox();
             this.btSalvar = new System.Windows.Forms.Button();
             this.btSair = new System.Windows.Forms.Button();
-            this.btTestar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbServidor
@@ -136,7 +135,7 @@
             // 
             // btSair
             // 
-            this.btSair.Location = new System.Drawing.Point(105, 98);
+            this.btSair.Location = new System.Drawing.Point(203, 97);
             this.btSair.Name = "btSair";
             this.btSair.Size = new System.Drawing.Size(75, 23);
             this.btSair.TabIndex = 11;
@@ -145,21 +144,12 @@
             this.btSair.UseVisualStyleBackColor = true;
             this.btSair.Click += new System.EventHandler(this.btSair_Click);
             // 
-            // btTestar
-            // 
-            this.btTestar.Location = new System.Drawing.Point(203, 98);
-            this.btTestar.Name = "btTestar";
-            this.btTestar.Size = new System.Drawing.Size(75, 23);
-            this.btTestar.TabIndex = 12;
-            this.btTestar.Text = "Testar";
-            this.btTestar.UseVisualStyleBackColor = true;
-            // 
             // ConfigDBForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(293, 152);
-            this.Controls.Add(this.btTestar);
+            this.ControlBox = false;
             this.Controls.Add(this.btSair);
             this.Controls.Add(this.btSalvar);
             this.Controls.Add(this.txSenha);
@@ -173,7 +163,6 @@
             this.Controls.Add(this.lbSenha);
             this.Controls.Add(this.lbServidor);
             this.Name = "ConfigDBForm";
-            this.Text = "Config";
             this.Load += new System.EventHandler(this.FrmConfigDB_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -194,6 +183,5 @@
         public System.Windows.Forms.TextBox txSenha;
         public System.Windows.Forms.Button btSalvar;
         private System.Windows.Forms.Button btSair;
-        private System.Windows.Forms.Button btTestar;
     }
 }

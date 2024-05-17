@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MegaProjeto.Control;
+using MegaProjeto.DAO;
 
 namespace MegaProjeto.Viwer
 {
@@ -19,6 +20,7 @@ namespace MegaProjeto.Viwer
             InitializeComponent();
             configDBController = new ConfigDBController();
             configDBController.SetView(this);
+            configDBController.CarregarConfiguracoes();
         }
        
         private void FrmConfigDB_Load(object sender, EventArgs e)
@@ -28,13 +30,19 @@ namespace MegaProjeto.Viwer
 
         private void btSair_Click(object sender, EventArgs e)
         {
-            // Encaminha o evento de clique do botão para o controlador
             configDBController.FechaConfigDBForm();
         }
 
         private void btSalvar_Click(object sender, EventArgs e)
         {
             configDBController.SalvarConfiguracoes(this);
+            configDBController.conecta();
+        }
+
+        private void btTestar_Click(object sender, EventArgs e)
+        {
+           
+            configDBController.conecta();
         }
     }
 }
