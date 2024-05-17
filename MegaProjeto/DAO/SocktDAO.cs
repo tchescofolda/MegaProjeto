@@ -37,6 +37,7 @@ namespace MegaProjeto.DAO
                     connection.Close();
                    
                 }
+               
             }
             catch (Exception ex)
             {
